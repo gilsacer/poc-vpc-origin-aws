@@ -19,3 +19,9 @@ variable "ec2-ami" {
   type        = string
   default     = "ami-020cba7c55df1f615"
 }
+
+variable "app_port" {
+  description = "Port on which the application runs on the EC2 instance"
+  type        = number
+  default     = 80
+}

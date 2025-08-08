@@ -21,8 +21,8 @@ resource "aws_security_group" "web" {
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["10.11.0.0/16"]
   }
 
-  tags = merge(local.tags, { Name = "Web Server" })
+  tags = merge(local.tags, { Name = "SG WebServer" })
 }
