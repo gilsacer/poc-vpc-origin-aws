@@ -1,10 +1,10 @@
-/* resource "aws_cloudfront_vpc_origin" "alb" {
+resource "aws_cloudfront_vpc_origin" "alb" {
   vpc_origin_endpoint_config {
     name = "poc-vpc-origin"
     ## arn alb
-    arn                    = aws_lb.endpoint_alb.arn 
+    arn                    = aws_lb.alb_webserver.arn
     http_port              = 80
-    https_port             = 443
+    https_port             = 80
     origin_protocol_policy = "match-viewer"
 
     origin_ssl_protocols {
@@ -12,4 +12,4 @@
       quantity = 1
     }
   }
-} */
+} 
